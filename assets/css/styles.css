@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap");
+
+:root {
+    --color-white: #f0f0f0;
+    --color-white-bg: #fafafa;
+
+    --color-dark-light: #797984;
+    --color-dark-medium: #312d37;
+    --color-dark: #000;
+
+    --color-orange-light: #fe8c00;
+    --color-orange-medium: #f83600;
+    --color-orange-dark: #f8360066;
+
+    --color-green: #2ecc71;
+    --color-red: #e74c3c;
+
+    --box-shadow: 0px 0px 20px rgba(248, 54, 0, 0.4);
+    --gradient-image: linear-gradient(90deg, #fe8c00 0%, #f83600 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    
+}
+
+body video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.container {
+    position: absolute;
+    border-radius: 10px;
+    width: 364px;
+    max-width: 100%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    animation: dark-to-light .9s ease-in-out;
+    transition: .1s ease-in-out;
+}
+
+#login_form {
+    padding: 28px 38px;
+    background-color: var(--color-white-bg);
+}
+
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 36px;
+    position: relative;
+}
+
+.header h1::before {
+    position: absolute;
+    content: "";
+    width: 44%;
+    background-color: var(--color-orange-medium);
+    height: 3px;
+    bottom: 4px;
+    border-radius: 5px;
+}
+
+#mode_icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 4px;
+}
+
+#social_media ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 18px;
+}
+
+#social_media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 35px;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    color: inherit;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+}
+
+#social_media a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    padding: 12px;
+    position: relative;
+}
+
+.form-control {
+    margin-bottom: 6px;
+    padding-bottom: 8px;
+    position: relative;
+    transition: .1s ease-in-out;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-control input {
+    border: 1px solid var(--color-white-bg);
+    display: block;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 100%;
+    padding: 9px 25px;
+    border-bottom: 1px solid var(--color-orange-light);
+}
+
+.form-control #circle,
+.form-control #check {
+    position: absolute;
+    top: 33px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    font-size: 12px;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control .icon {
+    position: absolute;
+    left: 5px;
+    bottom: 19px;
+}
+
+#forgot_password {
+    position: absolute;
+    bottom: 66px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 11px;
+    color: var(--color-dark-light);
+}
+
+#forgot_password:hover {
+    color: var(--color-orange-medium);
+}
+
+.form button {
+    border: none;
+    background-image: var(--gradient-image);
+    background-color: var(--color-orange-medium);
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+.form button:hover {
+    box-shadow: var(--box-shadow);
+}
+
+.form-control.success input {
+    border-color: var(--color-green);
+}
+
+.form-control.error input {
+    border-color: var(--color-red);
+}
+
+.form-control.success #check.fa-check-circle {
+    color: var(--color-green);
+    visibility: visible;
+}
+
+.form-control.error #circle.fa-exclamation-circle {
+    color: var(--color-red);
+    visibility: visible;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: var(--color-red);
+}
+
+.dark#login_form,
+.dark#login_form .input-field i,
+.dark#login_form button {
+    color: var(--color-white);
+    animation: light-to-dark .3s ease-in-out;
+}
+
+.dark#login_form, .dark#login_form input,
+.dark#login_form, .dark.container {
+    background-color: var(--color-dark-medium);
+    animation: light-to-dark .3s ease-in-out;
+}
+
+@keyframes dark-to-light {
+    0% {
+        background-color: var(--color-dark-medium);
+    }
+    
+    100% {
+        background-color: var(--color-white);
+    }
+}
+
+@keyframes light-to-dark {
+    0% { 
+        background-color: var(--color-white);
+    }
+    
+    100% {
+        background-color: var(--color-dark-medium);
+    }
+}
+
+@media (max-width: 575px) {
+
+    .container {
+        width: 90%;
+    }
+
+}

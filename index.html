@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Formulário de cadastro</title>
+
+        <meta property="og:title" content="Cadastro" />
+        <meta property="og:description" content="Preencha os campos abaixo" />
+        <meta property="og:image" content="https://ezequiel-lee.github.io/login-form/assets/img/menu.png" />
+        <meta property="og:url" content="https://ezequiel-lee.github.io/login-form/" />
+        <meta property="og:type" content="website" />
+
+        <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/animate.css">
+        
+    </head>
+
+    <body>
+        <main class="container animated fadeIn">
+            <div id="login_form">
+                <div class="header ">
+                    <h1 class="h1">Login</h1>
+                    <i class="fa-solid fa-moon" id="mode_icon"></i>
+                </div>
+
+                <div id="social_media">
+                    <ul class="social-link">
+                        <li class="animated fadeInLeft">
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-google"></i>
+                            </a>
+                        </li>
+                        <li class="animated fadeInRight">
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form action="https://api.staticforms.xyz/submit" method="post" id="form" class="form">
+                    <div class="form-control input-field">
+                        <label for="username"><i class="fa-solid fa-user icon"></i>Nome</label>
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Digite seu nome"
+                        />
+                        <i class="fas fa-exclamation-circle" id="circle"></i>
+                        <i class="fas fa-check-circle" id="check"></i>
+                        <small></small>
+                    </div>
+
+                    <div class="form-control input-field">
+                        <label for="email"><i class="fa-solid fa-envelope icon"></i>E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Digite seu e-mail"
+                        />
+                        <i class="fas fa-exclamation-circle" id="circle"></i>
+                        <i class="fas fa-check-circle" id="check"></i>
+                        <small></small>
+                    </div>
+
+                    <div class="form-control input-field">
+                        <label for="password"><i class="fa-solid fa-key icon"></i>Senha</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Digite sua senha"
+                        />
+                        <i class="fas fa-exclamation-circle" id="circle"></i>
+                        <i class="fas fa-check-circle" id="check"></i>
+                        <small></small>
+                    </div>
+
+                    <div class="form-control input-field">
+                        <label for="password-confirmation"><i class="fa-solid fa-key icon"></i>Confirmar senha</label>
+                        <input
+                            type="password"
+                            id="password-confirmation"
+                            placeholder="Digite a senha novamente"
+                        />
+                        <i class="fas fa-exclamation-circle" id="circle"></i>
+                        <i class="fas fa-check-circle" id="check"></i>
+                        <small></small>
+                    </div>
+                    <a href="#" id="forgot_password">Esqueceu a senha?</a>
+
+                    <button type="submit" class="animated fadeInUp">Cadastrar</button>
+
+                    <input type="hidden" name="accessKey" value="">
+                </form>
+            </div>
+        </main>
+        <video class="bg" src="./assets/bg/bg-video.mp4" autoplay loop muted></video>
+        <script src="./assets/js/scripts.js"></script>
+    </body>
+</html>
